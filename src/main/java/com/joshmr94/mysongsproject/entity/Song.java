@@ -1,5 +1,7 @@
 package com.joshmr94.mysongsproject.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +11,7 @@ import javax.persistence.Table;
 
 @Table(name="songs")
 @Entity
-public class Song {
+public class Song implements Serializable{
 	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
